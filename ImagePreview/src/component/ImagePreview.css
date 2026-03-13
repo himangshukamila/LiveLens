@@ -1,0 +1,37 @@
+/* floatUp — used by floating emoji reactions in ImagePreview.jsx */
+@keyframes floatUp {
+  0%   { transform: translateY(0)      scale(1);    opacity: 1; }
+  60%  {                                             opacity: 1; }
+  100% { transform: translateY(-420px) scale(1.25); opacity: 0; }
+}
+
+/* Connection status dot — same as Device 1's CameraPage.css */
+.status-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-connected {
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  animation: blink-green 1.4s ease-in-out infinite;
+}
+
+.status-disconnected {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+  animation: blink-red 1s ease-in-out infinite;
+}
+
+@keyframes blink-green {
+  0%, 100% { opacity: 1;    box-shadow: 0 0 7px #22c55e; }
+  50%       { opacity: 0.25; box-shadow: none; }
+}
+
+@keyframes blink-red {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 7px #ef4444; }
+  50%       { opacity: 0.3; box-shadow: none; }
+}

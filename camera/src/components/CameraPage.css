@@ -1,0 +1,183 @@
+.status-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-connected {
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  animation: blink-green 1.4s ease-in-out infinite;
+}
+
+.status-disconnected {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+  animation: blink-red 1s ease-in-out infinite;
+}
+
+@keyframes blink-green {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 7px #22c55e;
+  }
+  50% {
+    opacity: 0.25;
+    box-shadow: none;
+  }
+}
+
+@keyframes blink-red {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 7px #ef4444;
+  }
+  50% {
+    opacity: 0.3;
+    box-shadow: none;
+  }
+}
+
+.camera-container {
+  min-height: 100vh;
+  background: #080b12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  color: white;
+}
+
+.camera-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #598fc9, #cf3232, #d91892);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.camera-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.camera-preview {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.camera-preview img,
+.camera-preview video {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.camera-buttons {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.capture-btn,
+.submit-btn,
+.retake-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.capture-btn {
+  background: linear-gradient(90deg, #598fc9, #cf3232, #d91892);
+  color: white;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #598fc9, #cf3232, #d91892);
+  color: white;
+}
+
+.retake-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.emoji-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  text-align: center;
+}
+
+.emoji-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.emoji-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.emoji-btn {
+  font-size: 22px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.emoji-btn:hover {
+  transform: scale(1.1);
+}
+
+.socket-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-connected {
+  background: #22c55e;
+}
+
+.status-disconnected {
+  background: #ef4444;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #aaa;
+}
